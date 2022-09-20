@@ -1,0 +1,9 @@
+<% unless comment.archived? %>
+  <p> <%= "#{comment.commenter}: #{comment.body}"%></p>
+
+  <p>
+    <% if (current_user&.has_role? :Admin) || (current_user&.has_role? :Moderator) %>
+      <%= button_to "Destroy Comment", [comment.article, comment], method: :delete, class: "btn btn-outline-danger btn-sm" %>
+    <% end %>
+  </p>
+<% end %>

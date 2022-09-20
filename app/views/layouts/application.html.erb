@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application" %>
+  </head>
+
+  <body>
+    <% if user_signed_in? %>
+      <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a> <%= link_to 'Blog', articles_path, method: :get, class: "navbar-brand" %> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <% if (current_user&.has_role? :Admin) || (current_user&.has_role? :Moderator) %>
+                <li class="nav-item">
+                  <a><%= link_to 'Users', users_path, method: :get, class: "nav-link active" %></a>
+                </li>
+              <% end %>
+              <li class="nav-item">
+                <a><%= link_to 'Settings', edit_user_registration_path, method: :get, class: "nav-link active" %></a>
+              </li>
+              <li class="nav-item">
+                <a><%= link_to "Sign out", destroy_user_session_path, method: "delete", class: "nav-link active"%></a>
+              </li>
+            </ul>
+            <div class="d-flex">
+              <span class="navbar-text">
+                <p> Welcome <%= current_user.roles_name[0] %>! <%= current_user.email %> </p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <%end%>
+  </body>
+<%= yield %>
+</html>
