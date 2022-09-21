@@ -4068,3 +4068,18 @@ and the repository exists.
   INFO ---------------------------------------------------------------------------
  DEBUG [6c299e98] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
  DEBUG [6c299e98] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-21 17:07:56 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d464c2ea] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [d464c2ea] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-21 17:08:05 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [75722544] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [75722544] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-21 17:16:55 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6392a771] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [6392a771] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
