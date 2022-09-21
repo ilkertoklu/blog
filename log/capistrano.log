@@ -3992,3 +3992,13 @@ I, [2022-09-16T13:31:48.542636 #7615]  INFO -- : Writing /home/ubuntu/blog/relea
   INFO ---------------------------------------------------------------------------
  DEBUG [47b59bc1] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
  DEBUG [47b59bc1] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-21 15:43:49 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1cc293dd] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [1cc293dd] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-21 15:55:06 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [7596bac3] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [7596bac3] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
