@@ -4043,3 +4043,13 @@ and the repository exists.
   INFO ---------------------------------------------------------------------------
  DEBUG [5f378ee3] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
  DEBUG [5f378ee3] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-21 16:34:42 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1278ef9f] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [1278ef9f] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-21 16:36:42 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [eabd3179] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [eabd3179] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
