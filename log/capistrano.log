@@ -3952,3 +3952,38 @@ I, [2022-09-16T13:31:48.542636 #7615]  INFO -- : Writing /home/ubuntu/blog/relea
   INFO [8b994ad2] Running /usr/bin/env echo "Branch master (at f59813593e819322e8285afda10942bc3da32d5f) deployed as release 20220917092241 by ilkertoklu" >> /home/ubuntu/blog/revisions.log as ubuntu@35.158.91.158
  DEBUG [8b994ad2] Command: cd /home/ubuntu/blog/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env echo "Branch master (at f59813593e819322e8285afda10942bc3da32d5f) deployed as release 20220917092241 by ilkertoklu" >> /home/ubuntu/blog/revisions.log )
   INFO [8b994ad2] Finished in 0.171 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-20 17:45:03 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [3057e2b3] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [3057e2b3] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-20 17:48:57 +0300 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [7bd9f7f1] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [7bd9f7f1] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-20 17:49:04 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6273fe72] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [6273fe72] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-21 14:01:49 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [4858e999] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [4858e999] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-21 14:07:46 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2f7fe784] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [2f7fe784] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-21 14:12:16 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a5c592cc] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [a5c592cc] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-21 15:17:17 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ddba53b7] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [ddba53b7] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
