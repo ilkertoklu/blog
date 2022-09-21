@@ -4002,3 +4002,39 @@ I, [2022-09-16T13:31:48.542636 #7615]  INFO -- : Writing /home/ubuntu/blog/relea
   INFO ---------------------------------------------------------------------------
  DEBUG [7596bac3] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
  DEBUG [7596bac3] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-21 15:57:31 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [bd70dbb2] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [bd70dbb2] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+ DEBUG [bd70dbb2] Finished in 1.135 seconds with exit status 0 (successful).
+ DEBUG [949dfc77] Running /usr/bin/env which passenger as deploy@3.122.113.18
+ DEBUG [949dfc77] Command: /usr/bin/env which passenger
+ DEBUG [949dfc77] 	/usr/bin/passenger
+ DEBUG [949dfc77] Finished in 0.183 seconds with exit status 0 (successful).
+  INFO [b79632c4] Running /usr/bin/env mkdir -p /tmp as deploy@3.122.113.18
+ DEBUG [b79632c4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /tmp )
+  INFO [b79632c4] Finished in 0.208 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-0bd47c3e50a67daf1879.sh 0.0%
+  INFO Uploading /tmp/git-ssh-0bd47c3e50a67daf1879.sh 100.0%
+  INFO [cfebc215] Running /usr/bin/env chmod 700 /tmp/git-ssh-0bd47c3e50a67daf1879.sh as deploy@3.122.113.18
+ DEBUG [cfebc215] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env chmod 700 /tmp/git-ssh-0bd47c3e50a67daf1879.sh )
+  INFO [cfebc215] Finished in 0.167 seconds with exit status 0 (successful).
+  INFO [8c6f0df5] Running /usr/bin/env git ls-remote git@github.com:ilkertoklu/blog.git HEAD as deploy@3.122.113.18
+ DEBUG [8c6f0df5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0bd47c3e50a67daf1879.sh" ; /usr/bin/env git ls-remote git@github.com:ilkertoklu/blog.git HEAD )
+ DEBUG [8c6f0df5] 	Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+ DEBUG [8c6f0df5] 	git@github.com: Permission denied (publickey).
+ DEBUG [8c6f0df5] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-21 15:58:18 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [3d20382e] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [3d20382e] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-21 15:58:39 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [f24b7bf3] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [f24b7bf3] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
