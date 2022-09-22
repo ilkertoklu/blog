@@ -4083,3 +4083,23 @@ and the repository exists.
   INFO ---------------------------------------------------------------------------
  DEBUG [6392a771] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
  DEBUG [6392a771] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-21 17:26:19 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [aa1849cb] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [aa1849cb] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-21 17:37:20 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6d053acf] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [6d053acf] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-22 11:35:22 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [77964ca9] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [77964ca9] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-22 11:36:48 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8b86c1ac] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [8b86c1ac] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
