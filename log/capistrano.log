@@ -4297,3 +4297,687 @@ and the repository exists.
 /home/deploy/blog/releases/20220922083824/Rakefile:4:in `require_relative'
 /home/deploy/blog/releases/20220922083824/Rakefile:4:in `<top (required)>'
  DEBUG [00d1ed4f] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-22 12:02:47 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [039f2dfb] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [039f2dfb] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+ DEBUG [039f2dfb] Finished in 2.529 seconds with exit status 0 (successful).
+ DEBUG [ab8c77a5] Running /usr/bin/env which passenger as deploy@3.122.113.18
+ DEBUG [ab8c77a5] Command: /usr/bin/env which passenger
+ DEBUG [ab8c77a5] 	/usr/bin/passenger
+ DEBUG [ab8c77a5] Finished in 0.619 seconds with exit status 0 (successful).
+  INFO [9130c147] Running /usr/bin/env mkdir -p /tmp as deploy@3.122.113.18
+ DEBUG [9130c147] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /tmp )
+  INFO [9130c147] Finished in 0.217 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-a83d0f1ed058d7b957ac.sh 0.0%
+  INFO Uploading /tmp/git-ssh-a83d0f1ed058d7b957ac.sh 100.0%
+  INFO [279087f2] Running /usr/bin/env chmod 700 /tmp/git-ssh-a83d0f1ed058d7b957ac.sh as deploy@3.122.113.18
+ DEBUG [279087f2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env chmod 700 /tmp/git-ssh-a83d0f1ed058d7b957ac.sh )
+  INFO [279087f2] Finished in 0.184 seconds with exit status 0 (successful).
+  INFO [c1f15fc3] Running /usr/bin/env git ls-remote git@github.com:ilkertoklu/blog.git HEAD as deploy@3.122.113.18
+ DEBUG [c1f15fc3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a83d0f1ed058d7b957ac.sh" ; /usr/bin/env git ls-remote git@github.com:ilkertoklu/blog.git HEAD )
+ DEBUG [c1f15fc3] 	688e12b82226fb184d5f8fd35aadb304ac746d05	HEAD
+  INFO [c1f15fc3] Finished in 2.124 seconds with exit status 0 (successful).
+  INFO [33f0fa6d] Running /usr/bin/env mkdir -p /home/deploy/blog/shared /home/deploy/blog/releases as deploy@3.122.113.18
+ DEBUG [33f0fa6d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/blog/shared /home/deploy/blog/releases )
+  INFO [33f0fa6d] Finished in 0.179 seconds with exit status 0 (successful).
+  INFO [4afe3ab0] Running /usr/bin/env mkdir -p /home/deploy/blog/shared/log /home/deploy/blog/shared/tmp/pids /home/deploy/blog/shared/tmp/cache /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/shared/.bundle /home/deploy/blog/shared/public/system /home/deploy/blog/shared/public/uploads /home/deploy/blog/shared/public/assets as deploy@3.122.113.18
+ DEBUG [4afe3ab0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/blog/shared/log /home/deploy/blog/shared/tmp/pids /home/deploy/blog/shared/tmp/cache /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/shared/.bundle /home/deploy/blog/shared/public/system /home/deploy/blog/shared/public/uploads /home/deploy/blog/shared/public/assets )
+  INFO [4afe3ab0] Finished in 0.227 seconds with exit status 0 (successful).
+ DEBUG [bc2729b9] Running [ -f /home/deploy/blog/current/REVISION ] as deploy@3.122.113.18
+ DEBUG [bc2729b9] Command: [ -f /home/deploy/blog/current/REVISION ]
+ DEBUG [bc2729b9] Finished in 0.186 seconds with exit status 1 (failed).
+ DEBUG [72768b67] Running [ -f /home/deploy/blog/repo/HEAD ] as deploy@3.122.113.18
+ DEBUG [72768b67] Command: [ -f /home/deploy/blog/repo/HEAD ]
+ DEBUG [72768b67] Finished in 0.223 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/blog/repo
+ DEBUG [6bdbddd0] Running if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [6bdbddd0] Command: if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi
+ DEBUG [6bdbddd0] Finished in 0.195 seconds with exit status 0 (successful).
+  INFO [f0eacdc6] Running /usr/bin/env git remote set-url origin git@github.com:ilkertoklu/blog.git as deploy@3.122.113.18
+ DEBUG [f0eacdc6] Command: cd /home/deploy/blog/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a83d0f1ed058d7b957ac.sh" ; /usr/bin/env git remote set-url origin git@github.com:ilkertoklu/blog.git )
+  INFO [f0eacdc6] Finished in 0.220 seconds with exit status 0 (successful).
+  INFO [e9ab0a5a] Running /usr/bin/env git remote update --prune as deploy@3.122.113.18
+ DEBUG [e9ab0a5a] Command: cd /home/deploy/blog/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a83d0f1ed058d7b957ac.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e9ab0a5a] 	Fetching origin
+ DEBUG [e9ab0a5a] 	From github.com:ilkertoklu/blog
+   4cc9909..688e12b  master     -> master
+  INFO [e9ab0a5a] Finished in 2.142 seconds with exit status 0 (successful).
+ DEBUG [5bfddcd9] Running if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [5bfddcd9] Command: if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi
+ DEBUG [5bfddcd9] Finished in 0.180 seconds with exit status 0 (successful).
+  INFO [33b2744a] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20220922090254 as deploy@3.122.113.18
+ DEBUG [33b2744a] Command: cd /home/deploy/blog/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a83d0f1ed058d7b957ac.sh" ; /usr/bin/env mkdir -p /home/deploy/blog/releases/20220922090254 )
+  INFO [33b2744a] Finished in 0.223 seconds with exit status 0 (successful).
+  INFO [57ac14a5] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/blog/releases/20220922090254 as deploy@3.122.113.18
+ DEBUG [57ac14a5] Command: cd /home/deploy/blog/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a83d0f1ed058d7b957ac.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/blog/releases/20220922090254 )
+  INFO [57ac14a5] Finished in 3.486 seconds with exit status 0 (successful).
+ DEBUG [e5ddce1b] Running if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [e5ddce1b] Command: if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi
+ DEBUG [e5ddce1b] Finished in 0.221 seconds with exit status 0 (successful).
+ DEBUG [cd0dc268] Running /usr/bin/env git rev-list --max-count=1 master as deploy@3.122.113.18
+ DEBUG [cd0dc268] Command: cd /home/deploy/blog/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a83d0f1ed058d7b957ac.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [cd0dc268] 	688e12b82226fb184d5f8fd35aadb304ac746d05
+ DEBUG [cd0dc268] Finished in 0.181 seconds with exit status 0 (successful).
+ DEBUG [7258e3ac] Running if test ! -d /home/deploy/blog/releases/20220922090254; then echo "Directory does not exist '/home/deploy/blog/releases/20220922090254'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [7258e3ac] Command: if test ! -d /home/deploy/blog/releases/20220922090254; then echo "Directory does not exist '/home/deploy/blog/releases/20220922090254'" 1>&2; false; fi
+ DEBUG [7258e3ac] Finished in 0.222 seconds with exit status 0 (successful).
+  INFO [6efba585] Running /usr/bin/env echo "688e12b82226fb184d5f8fd35aadb304ac746d05" > REVISION as deploy@3.122.113.18
+ DEBUG [6efba585] Command: cd /home/deploy/blog/releases/20220922090254 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env echo "688e12b82226fb184d5f8fd35aadb304ac746d05" > REVISION )
+  INFO [6efba585] Finished in 0.179 seconds with exit status 0 (successful).
+  INFO [97e11147] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20220922090254 /home/deploy/blog/releases/20220922090254/tmp /home/deploy/blog/releases/20220922090254/vendor /home/deploy/blog/releases/20220922090254/public as deploy@3.122.113.18
+ DEBUG [97e11147] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/blog/releases/20220922090254 /home/deploy/blog/releases/20220922090254/tmp /home/deploy/blog/releases/20220922090254/vendor /home/deploy/blog/releases/20220922090254/public )
+  INFO [97e11147] Finished in 0.220 seconds with exit status 0 (successful).
+ DEBUG [8643be70] Running [ -L /home/deploy/blog/releases/20220922090254/log ] as deploy@3.122.113.18
+ DEBUG [8643be70] Command: [ -L /home/deploy/blog/releases/20220922090254/log ]
+ DEBUG [8643be70] Finished in 0.183 seconds with exit status 1 (failed).
+ DEBUG [df4762ab] Running [ -d /home/deploy/blog/releases/20220922090254/log ] as deploy@3.122.113.18
+ DEBUG [df4762ab] Command: [ -d /home/deploy/blog/releases/20220922090254/log ]
+ DEBUG [df4762ab] Finished in 0.248 seconds with exit status 0 (successful).
+  INFO [313d85de] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090254/log as deploy@3.122.113.18
+ DEBUG [313d85de] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090254/log )
+  INFO [313d85de] Finished in 0.177 seconds with exit status 0 (successful).
+  INFO [fb4a51b7] Running /usr/bin/env ln -s /home/deploy/blog/shared/log /home/deploy/blog/releases/20220922090254/log as deploy@3.122.113.18
+ DEBUG [fb4a51b7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/log /home/deploy/blog/releases/20220922090254/log )
+  INFO [fb4a51b7] Finished in 0.224 seconds with exit status 0 (successful).
+ DEBUG [3cce9d36] Running [ -L /home/deploy/blog/releases/20220922090254/tmp/pids ] as deploy@3.122.113.18
+ DEBUG [3cce9d36] Command: [ -L /home/deploy/blog/releases/20220922090254/tmp/pids ]
+ DEBUG [3cce9d36] Finished in 0.177 seconds with exit status 1 (failed).
+ DEBUG [fa368ad8] Running [ -d /home/deploy/blog/releases/20220922090254/tmp/pids ] as deploy@3.122.113.18
+ DEBUG [fa368ad8] Command: [ -d /home/deploy/blog/releases/20220922090254/tmp/pids ]
+ DEBUG [fa368ad8] Finished in 0.224 seconds with exit status 0 (successful).
+  INFO [44073556] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090254/tmp/pids as deploy@3.122.113.18
+ DEBUG [44073556] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090254/tmp/pids )
+  INFO [44073556] Finished in 0.177 seconds with exit status 0 (successful).
+  INFO [0b4f3696] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/pids /home/deploy/blog/releases/20220922090254/tmp/pids as deploy@3.122.113.18
+ DEBUG [0b4f3696] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/tmp/pids /home/deploy/blog/releases/20220922090254/tmp/pids )
+  INFO [0b4f3696] Finished in 0.218 seconds with exit status 0 (successful).
+ DEBUG [360fe118] Running [ -L /home/deploy/blog/releases/20220922090254/tmp/cache ] as deploy@3.122.113.18
+ DEBUG [360fe118] Command: [ -L /home/deploy/blog/releases/20220922090254/tmp/cache ]
+ DEBUG [360fe118] Finished in 0.176 seconds with exit status 1 (failed).
+ DEBUG [835775cb] Running [ -d /home/deploy/blog/releases/20220922090254/tmp/cache ] as deploy@3.122.113.18
+ DEBUG [835775cb] Command: [ -d /home/deploy/blog/releases/20220922090254/tmp/cache ]
+ DEBUG [835775cb] Finished in 0.223 seconds with exit status 0 (successful).
+  INFO [ee530a73] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090254/tmp/cache as deploy@3.122.113.18
+ DEBUG [ee530a73] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090254/tmp/cache )
+  INFO [ee530a73] Finished in 0.300 seconds with exit status 0 (successful).
+  INFO [435d05ff] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/cache /home/deploy/blog/releases/20220922090254/tmp/cache as deploy@3.122.113.18
+ DEBUG [435d05ff] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/tmp/cache /home/deploy/blog/releases/20220922090254/tmp/cache )
+  INFO [435d05ff] Finished in 0.221 seconds with exit status 0 (successful).
+ DEBUG [48c1dfee] Running [ -L /home/deploy/blog/releases/20220922090254/tmp/sockets ] as deploy@3.122.113.18
+ DEBUG [48c1dfee] Command: [ -L /home/deploy/blog/releases/20220922090254/tmp/sockets ]
+ DEBUG [48c1dfee] Finished in 0.182 seconds with exit status 1 (failed).
+ DEBUG [12128cd9] Running [ -d /home/deploy/blog/releases/20220922090254/tmp/sockets ] as deploy@3.122.113.18
+ DEBUG [12128cd9] Command: [ -d /home/deploy/blog/releases/20220922090254/tmp/sockets ]
+ DEBUG [12128cd9] Finished in 0.233 seconds with exit status 1 (failed).
+  INFO [c7282d1b] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/releases/20220922090254/tmp/sockets as deploy@3.122.113.18
+ DEBUG [c7282d1b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/releases/20220922090254/tmp/sockets )
+  INFO [c7282d1b] Finished in 0.179 seconds with exit status 0 (successful).
+ DEBUG [df003f25] Running [ -L /home/deploy/blog/releases/20220922090254/vendor/bundle ] as deploy@3.122.113.18
+ DEBUG [df003f25] Command: [ -L /home/deploy/blog/releases/20220922090254/vendor/bundle ]
+ DEBUG [df003f25] Finished in 0.226 seconds with exit status 1 (failed).
+ DEBUG [4df3e6a0] Running [ -d /home/deploy/blog/releases/20220922090254/vendor/bundle ] as deploy@3.122.113.18
+ DEBUG [4df3e6a0] Command: [ -d /home/deploy/blog/releases/20220922090254/vendor/bundle ]
+ DEBUG [4df3e6a0] Finished in 0.182 seconds with exit status 1 (failed).
+  INFO [862035ca] Running /usr/bin/env ln -s /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/releases/20220922090254/vendor/bundle as deploy@3.122.113.18
+ DEBUG [862035ca] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/releases/20220922090254/vendor/bundle )
+  INFO [862035ca] Finished in 0.223 seconds with exit status 0 (successful).
+ DEBUG [f2e2ba2f] Running [ -L /home/deploy/blog/releases/20220922090254/.bundle ] as deploy@3.122.113.18
+ DEBUG [f2e2ba2f] Command: [ -L /home/deploy/blog/releases/20220922090254/.bundle ]
+ DEBUG [f2e2ba2f] Finished in 0.184 seconds with exit status 1 (failed).
+ DEBUG [aa8f5bd2] Running [ -d /home/deploy/blog/releases/20220922090254/.bundle ] as deploy@3.122.113.18
+ DEBUG [aa8f5bd2] Command: [ -d /home/deploy/blog/releases/20220922090254/.bundle ]
+ DEBUG [aa8f5bd2] Finished in 0.224 seconds with exit status 0 (successful).
+  INFO [808ad511] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090254/.bundle as deploy@3.122.113.18
+ DEBUG [808ad511] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090254/.bundle )
+  INFO [808ad511] Finished in 0.180 seconds with exit status 0 (successful).
+  INFO [1158e85d] Running /usr/bin/env ln -s /home/deploy/blog/shared/.bundle /home/deploy/blog/releases/20220922090254/.bundle as deploy@3.122.113.18
+ DEBUG [1158e85d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/.bundle /home/deploy/blog/releases/20220922090254/.bundle )
+  INFO [1158e85d] Finished in 0.219 seconds with exit status 0 (successful).
+ DEBUG [2bb57773] Running [ -L /home/deploy/blog/releases/20220922090254/public/system ] as deploy@3.122.113.18
+ DEBUG [2bb57773] Command: [ -L /home/deploy/blog/releases/20220922090254/public/system ]
+ DEBUG [2bb57773] Finished in 0.188 seconds with exit status 1 (failed).
+ DEBUG [4a4e408b] Running [ -d /home/deploy/blog/releases/20220922090254/public/system ] as deploy@3.122.113.18
+ DEBUG [4a4e408b] Command: [ -d /home/deploy/blog/releases/20220922090254/public/system ]
+ DEBUG [4a4e408b] Finished in 0.224 seconds with exit status 1 (failed).
+  INFO [e691d35a] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/system /home/deploy/blog/releases/20220922090254/public/system as deploy@3.122.113.18
+ DEBUG [e691d35a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/public/system /home/deploy/blog/releases/20220922090254/public/system )
+  INFO [e691d35a] Finished in 0.176 seconds with exit status 0 (successful).
+ DEBUG [94089b6d] Running [ -L /home/deploy/blog/releases/20220922090254/public/uploads ] as deploy@3.122.113.18
+ DEBUG [94089b6d] Command: [ -L /home/deploy/blog/releases/20220922090254/public/uploads ]
+ DEBUG [94089b6d] Finished in 0.223 seconds with exit status 1 (failed).
+ DEBUG [7a462585] Running [ -d /home/deploy/blog/releases/20220922090254/public/uploads ] as deploy@3.122.113.18
+ DEBUG [7a462585] Command: [ -d /home/deploy/blog/releases/20220922090254/public/uploads ]
+ DEBUG [7a462585] Finished in 0.180 seconds with exit status 1 (failed).
+  INFO [bf31143c] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/uploads /home/deploy/blog/releases/20220922090254/public/uploads as deploy@3.122.113.18
+ DEBUG [bf31143c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/public/uploads /home/deploy/blog/releases/20220922090254/public/uploads )
+  INFO [bf31143c] Finished in 0.232 seconds with exit status 0 (successful).
+ DEBUG [b3ee76a1] Running [ -L /home/deploy/blog/releases/20220922090254/public/assets ] as deploy@3.122.113.18
+ DEBUG [b3ee76a1] Command: [ -L /home/deploy/blog/releases/20220922090254/public/assets ]
+ DEBUG [b3ee76a1] Finished in 0.183 seconds with exit status 1 (failed).
+ DEBUG [13818917] Running [ -d /home/deploy/blog/releases/20220922090254/public/assets ] as deploy@3.122.113.18
+ DEBUG [13818917] Command: [ -d /home/deploy/blog/releases/20220922090254/public/assets ]
+ DEBUG [13818917] Finished in 0.225 seconds with exit status 1 (failed).
+  INFO [fc2dfaf9] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/assets /home/deploy/blog/releases/20220922090254/public/assets as deploy@3.122.113.18
+ DEBUG [fc2dfaf9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/public/assets /home/deploy/blog/releases/20220922090254/public/assets )
+  INFO [fc2dfaf9] Finished in 0.178 seconds with exit status 0 (successful).
+ DEBUG [d617b8fa] Running if test ! -d /home/deploy/blog/releases/20220922090254; then echo "Directory does not exist '/home/deploy/blog/releases/20220922090254'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [d617b8fa] Command: if test ! -d /home/deploy/blog/releases/20220922090254; then echo "Directory does not exist '/home/deploy/blog/releases/20220922090254'" 1>&2; false; fi
+ DEBUG [d617b8fa] Finished in 0.279 seconds with exit status 0 (successful).
+  INFO [187ad2e1] Running $HOME/.rbenv/bin/rbenv exec rake assets:precompile as deploy@3.122.113.18
+ DEBUG [187ad2e1] Command: cd /home/deploy/blog/releases/20220922090254 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec rake assets:precompile )
+ DEBUG [187ad2e1] 	rake aborted!
+ DEBUG [187ad2e1] 	Bundler::GemNotFound: Could not find gem 'rails (~> 7.0.3, >= 7.0.3.1)' in locally installed gems or in gems cached in vendor/cache.
+ DEBUG [187ad2e1] 	<internal:/home/deploy/.rbenv/versions/3.1.2/lib/ruby/3.1.0/rubygems/core_ext/kernel_require.rb>:85:in `require'
+<internal:/home/deploy/.rbenv/versions/3.1.2/lib/ruby/3.1.0/rubygems/core_ext/kernel_require.rb>:85:in `require'
+/home/deploy/blog/releases/20220922090254/config/boot.rb:3:in `<top (required)>'
+/home/deploy/blog/releases/20220922090254/config/application.rb:1:in `require_relative'
+/home/deploy/blog/releases/20220922090254/config/application.rb:1:in `<top (required)>'
+/home/deploy/blog/releases/20220922090254/Rakefile:4:in `require_relative'
+/home/deploy/blog/releases/20220922090254/Rakefile:4:in `<top (required)>'
+ DEBUG [187ad2e1] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-22 12:03:55 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1ece58d4] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [1ece58d4] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+ DEBUG [1ece58d4] Finished in 1.982 seconds with exit status 0 (successful).
+ DEBUG [4f847509] Running /usr/bin/env which passenger as deploy@3.122.113.18
+ DEBUG [4f847509] Command: /usr/bin/env which passenger
+ DEBUG [4f847509] 	/usr/bin/passenger
+ DEBUG [4f847509] Finished in 0.515 seconds with exit status 0 (successful).
+  INFO [2f007b4b] Running /usr/bin/env mkdir -p /tmp as deploy@3.122.113.18
+ DEBUG [2f007b4b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /tmp )
+  INFO [2f007b4b] Finished in 0.301 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-16b378606618d5d2185b.sh 0.0%
+  INFO Uploading /tmp/git-ssh-16b378606618d5d2185b.sh 100.0%
+  INFO [138cc5cf] Running /usr/bin/env chmod 700 /tmp/git-ssh-16b378606618d5d2185b.sh as deploy@3.122.113.18
+ DEBUG [138cc5cf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env chmod 700 /tmp/git-ssh-16b378606618d5d2185b.sh )
+  INFO [138cc5cf] Finished in 0.177 seconds with exit status 0 (successful).
+  INFO [5328c97b] Running /usr/bin/env git ls-remote git@github.com:ilkertoklu/blog.git HEAD as deploy@3.122.113.18
+ DEBUG [5328c97b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-16b378606618d5d2185b.sh" ; /usr/bin/env git ls-remote git@github.com:ilkertoklu/blog.git HEAD )
+ DEBUG [5328c97b] 	688e12b82226fb184d5f8fd35aadb304ac746d05	HEAD
+  INFO [5328c97b] Finished in 2.049 seconds with exit status 0 (successful).
+  INFO [aaec4235] Running /usr/bin/env mkdir -p /home/deploy/blog/shared /home/deploy/blog/releases as deploy@3.122.113.18
+ DEBUG [aaec4235] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/blog/shared /home/deploy/blog/releases )
+  INFO [aaec4235] Finished in 0.175 seconds with exit status 0 (successful).
+  INFO [eddf07e9] Running /usr/bin/env mkdir -p /home/deploy/blog/shared/log /home/deploy/blog/shared/tmp/pids /home/deploy/blog/shared/tmp/cache /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/shared/.bundle /home/deploy/blog/shared/public/system /home/deploy/blog/shared/public/uploads /home/deploy/blog/shared/public/assets as deploy@3.122.113.18
+ DEBUG [eddf07e9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/blog/shared/log /home/deploy/blog/shared/tmp/pids /home/deploy/blog/shared/tmp/cache /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/shared/.bundle /home/deploy/blog/shared/public/system /home/deploy/blog/shared/public/uploads /home/deploy/blog/shared/public/assets )
+  INFO [eddf07e9] Finished in 0.215 seconds with exit status 0 (successful).
+ DEBUG [e4f12962] Running [ -f /home/deploy/blog/current/REVISION ] as deploy@3.122.113.18
+ DEBUG [e4f12962] Command: [ -f /home/deploy/blog/current/REVISION ]
+ DEBUG [e4f12962] Finished in 0.181 seconds with exit status 1 (failed).
+ DEBUG [ac52ea96] Running [ -f /home/deploy/blog/repo/HEAD ] as deploy@3.122.113.18
+ DEBUG [ac52ea96] Command: [ -f /home/deploy/blog/repo/HEAD ]
+ DEBUG [ac52ea96] Finished in 0.225 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/blog/repo
+ DEBUG [ef035a99] Running if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [ef035a99] Command: if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi
+ DEBUG [ef035a99] Finished in 0.193 seconds with exit status 0 (successful).
+  INFO [0ae13593] Running /usr/bin/env git remote set-url origin git@github.com:ilkertoklu/blog.git as deploy@3.122.113.18
+ DEBUG [0ae13593] Command: cd /home/deploy/blog/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-16b378606618d5d2185b.sh" ; /usr/bin/env git remote set-url origin git@github.com:ilkertoklu/blog.git )
+  INFO [0ae13593] Finished in 0.220 seconds with exit status 0 (successful).
+  INFO [0df9eb59] Running /usr/bin/env git remote update --prune as deploy@3.122.113.18
+ DEBUG [0df9eb59] Command: cd /home/deploy/blog/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-16b378606618d5d2185b.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [0df9eb59] 	Fetching origin
+  INFO [0df9eb59] Finished in 1.753 seconds with exit status 0 (successful).
+ DEBUG [76c6a589] Running if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [76c6a589] Command: if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi
+ DEBUG [76c6a589] Finished in 0.178 seconds with exit status 0 (successful).
+  INFO [d3ec4a8e] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20220922090401 as deploy@3.122.113.18
+ DEBUG [d3ec4a8e] Command: cd /home/deploy/blog/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-16b378606618d5d2185b.sh" ; /usr/bin/env mkdir -p /home/deploy/blog/releases/20220922090401 )
+  INFO [d3ec4a8e] Finished in 0.226 seconds with exit status 0 (successful).
+  INFO [14cf3ffb] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/blog/releases/20220922090401 as deploy@3.122.113.18
+ DEBUG [14cf3ffb] Command: cd /home/deploy/blog/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-16b378606618d5d2185b.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/blog/releases/20220922090401 )
+  INFO [14cf3ffb] Finished in 3.075 seconds with exit status 0 (successful).
+ DEBUG [a461b197] Running if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [a461b197] Command: if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi
+ DEBUG [a461b197] Finished in 0.235 seconds with exit status 0 (successful).
+ DEBUG [9d631a90] Running /usr/bin/env git rev-list --max-count=1 master as deploy@3.122.113.18
+ DEBUG [9d631a90] Command: cd /home/deploy/blog/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-16b378606618d5d2185b.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [9d631a90] 	688e12b82226fb184d5f8fd35aadb304ac746d05
+ DEBUG [9d631a90] Finished in 0.187 seconds with exit status 0 (successful).
+ DEBUG [17a49fa2] Running if test ! -d /home/deploy/blog/releases/20220922090401; then echo "Directory does not exist '/home/deploy/blog/releases/20220922090401'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [17a49fa2] Command: if test ! -d /home/deploy/blog/releases/20220922090401; then echo "Directory does not exist '/home/deploy/blog/releases/20220922090401'" 1>&2; false; fi
+ DEBUG [17a49fa2] Finished in 0.220 seconds with exit status 0 (successful).
+  INFO [b95ccfea] Running /usr/bin/env echo "688e12b82226fb184d5f8fd35aadb304ac746d05" > REVISION as deploy@3.122.113.18
+ DEBUG [b95ccfea] Command: cd /home/deploy/blog/releases/20220922090401 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env echo "688e12b82226fb184d5f8fd35aadb304ac746d05" > REVISION )
+  INFO [b95ccfea] Finished in 0.177 seconds with exit status 0 (successful).
+  INFO [01244e4e] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20220922090401 /home/deploy/blog/releases/20220922090401/tmp /home/deploy/blog/releases/20220922090401/vendor /home/deploy/blog/releases/20220922090401/public as deploy@3.122.113.18
+ DEBUG [01244e4e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/blog/releases/20220922090401 /home/deploy/blog/releases/20220922090401/tmp /home/deploy/blog/releases/20220922090401/vendor /home/deploy/blog/releases/20220922090401/public )
+  INFO [01244e4e] Finished in 0.217 seconds with exit status 0 (successful).
+ DEBUG [16609e41] Running [ -L /home/deploy/blog/releases/20220922090401/log ] as deploy@3.122.113.18
+ DEBUG [16609e41] Command: [ -L /home/deploy/blog/releases/20220922090401/log ]
+ DEBUG [16609e41] Finished in 0.188 seconds with exit status 1 (failed).
+ DEBUG [13173a9d] Running [ -d /home/deploy/blog/releases/20220922090401/log ] as deploy@3.122.113.18
+ DEBUG [13173a9d] Command: [ -d /home/deploy/blog/releases/20220922090401/log ]
+ DEBUG [13173a9d] Finished in 0.227 seconds with exit status 0 (successful).
+  INFO [37cde485] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090401/log as deploy@3.122.113.18
+ DEBUG [37cde485] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090401/log )
+  INFO [37cde485] Finished in 0.180 seconds with exit status 0 (successful).
+  INFO [a0a5f850] Running /usr/bin/env ln -s /home/deploy/blog/shared/log /home/deploy/blog/releases/20220922090401/log as deploy@3.122.113.18
+ DEBUG [a0a5f850] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/log /home/deploy/blog/releases/20220922090401/log )
+  INFO [a0a5f850] Finished in 0.217 seconds with exit status 0 (successful).
+ DEBUG [f72baec3] Running [ -L /home/deploy/blog/releases/20220922090401/tmp/pids ] as deploy@3.122.113.18
+ DEBUG [f72baec3] Command: [ -L /home/deploy/blog/releases/20220922090401/tmp/pids ]
+ DEBUG [f72baec3] Finished in 0.181 seconds with exit status 1 (failed).
+ DEBUG [4860fb84] Running [ -d /home/deploy/blog/releases/20220922090401/tmp/pids ] as deploy@3.122.113.18
+ DEBUG [4860fb84] Command: [ -d /home/deploy/blog/releases/20220922090401/tmp/pids ]
+ DEBUG [4860fb84] Finished in 0.224 seconds with exit status 0 (successful).
+  INFO [51022e15] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090401/tmp/pids as deploy@3.122.113.18
+ DEBUG [51022e15] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090401/tmp/pids )
+  INFO [51022e15] Finished in 0.177 seconds with exit status 0 (successful).
+  INFO [fef849f4] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/pids /home/deploy/blog/releases/20220922090401/tmp/pids as deploy@3.122.113.18
+ DEBUG [fef849f4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/tmp/pids /home/deploy/blog/releases/20220922090401/tmp/pids )
+  INFO [fef849f4] Finished in 0.219 seconds with exit status 0 (successful).
+ DEBUG [72614cdc] Running [ -L /home/deploy/blog/releases/20220922090401/tmp/cache ] as deploy@3.122.113.18
+ DEBUG [72614cdc] Command: [ -L /home/deploy/blog/releases/20220922090401/tmp/cache ]
+ DEBUG [72614cdc] Finished in 0.179 seconds with exit status 1 (failed).
+ DEBUG [0e1539df] Running [ -d /home/deploy/blog/releases/20220922090401/tmp/cache ] as deploy@3.122.113.18
+ DEBUG [0e1539df] Command: [ -d /home/deploy/blog/releases/20220922090401/tmp/cache ]
+ DEBUG [0e1539df] Finished in 0.227 seconds with exit status 0 (successful).
+  INFO [a9f4f323] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090401/tmp/cache as deploy@3.122.113.18
+ DEBUG [a9f4f323] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090401/tmp/cache )
+  INFO [a9f4f323] Finished in 0.302 seconds with exit status 0 (successful).
+  INFO [3c1f550a] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/cache /home/deploy/blog/releases/20220922090401/tmp/cache as deploy@3.122.113.18
+ DEBUG [3c1f550a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/tmp/cache /home/deploy/blog/releases/20220922090401/tmp/cache )
+  INFO [3c1f550a] Finished in 0.217 seconds with exit status 0 (successful).
+ DEBUG [315629af] Running [ -L /home/deploy/blog/releases/20220922090401/tmp/sockets ] as deploy@3.122.113.18
+ DEBUG [315629af] Command: [ -L /home/deploy/blog/releases/20220922090401/tmp/sockets ]
+ DEBUG [315629af] Finished in 0.179 seconds with exit status 1 (failed).
+ DEBUG [33f97ec1] Running [ -d /home/deploy/blog/releases/20220922090401/tmp/sockets ] as deploy@3.122.113.18
+ DEBUG [33f97ec1] Command: [ -d /home/deploy/blog/releases/20220922090401/tmp/sockets ]
+ DEBUG [33f97ec1] Finished in 0.224 seconds with exit status 1 (failed).
+  INFO [38824bc3] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/releases/20220922090401/tmp/sockets as deploy@3.122.113.18
+ DEBUG [38824bc3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/releases/20220922090401/tmp/sockets )
+  INFO [38824bc3] Finished in 0.177 seconds with exit status 0 (successful).
+ DEBUG [4872ac8a] Running [ -L /home/deploy/blog/releases/20220922090401/vendor/bundle ] as deploy@3.122.113.18
+ DEBUG [4872ac8a] Command: [ -L /home/deploy/blog/releases/20220922090401/vendor/bundle ]
+ DEBUG [4872ac8a] Finished in 0.218 seconds with exit status 1 (failed).
+ DEBUG [f6979c57] Running [ -d /home/deploy/blog/releases/20220922090401/vendor/bundle ] as deploy@3.122.113.18
+ DEBUG [f6979c57] Command: [ -d /home/deploy/blog/releases/20220922090401/vendor/bundle ]
+ DEBUG [f6979c57] Finished in 0.177 seconds with exit status 1 (failed).
+  INFO [6155066e] Running /usr/bin/env ln -s /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/releases/20220922090401/vendor/bundle as deploy@3.122.113.18
+ DEBUG [6155066e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/releases/20220922090401/vendor/bundle )
+  INFO [6155066e] Finished in 0.218 seconds with exit status 0 (successful).
+ DEBUG [c29f43b5] Running [ -L /home/deploy/blog/releases/20220922090401/.bundle ] as deploy@3.122.113.18
+ DEBUG [c29f43b5] Command: [ -L /home/deploy/blog/releases/20220922090401/.bundle ]
+ DEBUG [c29f43b5] Finished in 0.180 seconds with exit status 1 (failed).
+ DEBUG [9ba27c00] Running [ -d /home/deploy/blog/releases/20220922090401/.bundle ] as deploy@3.122.113.18
+ DEBUG [9ba27c00] Command: [ -d /home/deploy/blog/releases/20220922090401/.bundle ]
+ DEBUG [9ba27c00] Finished in 0.223 seconds with exit status 0 (successful).
+  INFO [aa745f3f] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090401/.bundle as deploy@3.122.113.18
+ DEBUG [aa745f3f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090401/.bundle )
+  INFO [aa745f3f] Finished in 0.181 seconds with exit status 0 (successful).
+  INFO [841318e7] Running /usr/bin/env ln -s /home/deploy/blog/shared/.bundle /home/deploy/blog/releases/20220922090401/.bundle as deploy@3.122.113.18
+ DEBUG [841318e7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/.bundle /home/deploy/blog/releases/20220922090401/.bundle )
+  INFO [841318e7] Finished in 0.225 seconds with exit status 0 (successful).
+ DEBUG [9beb8d9f] Running [ -L /home/deploy/blog/releases/20220922090401/public/system ] as deploy@3.122.113.18
+ DEBUG [9beb8d9f] Command: [ -L /home/deploy/blog/releases/20220922090401/public/system ]
+ DEBUG [9beb8d9f] Finished in 0.188 seconds with exit status 1 (failed).
+ DEBUG [2ac5bd1c] Running [ -d /home/deploy/blog/releases/20220922090401/public/system ] as deploy@3.122.113.18
+ DEBUG [2ac5bd1c] Command: [ -d /home/deploy/blog/releases/20220922090401/public/system ]
+ DEBUG [2ac5bd1c] Finished in 0.229 seconds with exit status 1 (failed).
+  INFO [2c717fbe] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/system /home/deploy/blog/releases/20220922090401/public/system as deploy@3.122.113.18
+ DEBUG [2c717fbe] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/public/system /home/deploy/blog/releases/20220922090401/public/system )
+  INFO [2c717fbe] Finished in 0.176 seconds with exit status 0 (successful).
+ DEBUG [09b578a5] Running [ -L /home/deploy/blog/releases/20220922090401/public/uploads ] as deploy@3.122.113.18
+ DEBUG [09b578a5] Command: [ -L /home/deploy/blog/releases/20220922090401/public/uploads ]
+ DEBUG [09b578a5] Finished in 0.218 seconds with exit status 1 (failed).
+ DEBUG [9aa73391] Running [ -d /home/deploy/blog/releases/20220922090401/public/uploads ] as deploy@3.122.113.18
+ DEBUG [9aa73391] Command: [ -d /home/deploy/blog/releases/20220922090401/public/uploads ]
+ DEBUG [9aa73391] Finished in 0.184 seconds with exit status 1 (failed).
+  INFO [693202a3] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/uploads /home/deploy/blog/releases/20220922090401/public/uploads as deploy@3.122.113.18
+ DEBUG [693202a3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/public/uploads /home/deploy/blog/releases/20220922090401/public/uploads )
+  INFO [693202a3] Finished in 0.225 seconds with exit status 0 (successful).
+ DEBUG [60a53600] Running [ -L /home/deploy/blog/releases/20220922090401/public/assets ] as deploy@3.122.113.18
+ DEBUG [60a53600] Command: [ -L /home/deploy/blog/releases/20220922090401/public/assets ]
+ DEBUG [60a53600] Finished in 0.178 seconds with exit status 1 (failed).
+ DEBUG [8009a4a3] Running [ -d /home/deploy/blog/releases/20220922090401/public/assets ] as deploy@3.122.113.18
+ DEBUG [8009a4a3] Command: [ -d /home/deploy/blog/releases/20220922090401/public/assets ]
+ DEBUG [8009a4a3] Finished in 0.304 seconds with exit status 1 (failed).
+  INFO [5b065dd8] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/assets /home/deploy/blog/releases/20220922090401/public/assets as deploy@3.122.113.18
+ DEBUG [5b065dd8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/public/assets /home/deploy/blog/releases/20220922090401/public/assets )
+  INFO [5b065dd8] Finished in 0.180 seconds with exit status 0 (successful).
+ DEBUG [d776fc5f] Running if test ! -d /home/deploy/blog/releases/20220922090401; then echo "Directory does not exist '/home/deploy/blog/releases/20220922090401'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [d776fc5f] Command: if test ! -d /home/deploy/blog/releases/20220922090401; then echo "Directory does not exist '/home/deploy/blog/releases/20220922090401'" 1>&2; false; fi
+ DEBUG [d776fc5f] Finished in 0.231 seconds with exit status 0 (successful).
+  INFO [78513515] Running $HOME/.rbenv/bin/rbenv exec rake assets:precompile as deploy@3.122.113.18
+ DEBUG [78513515] Command: cd /home/deploy/blog/releases/20220922090401 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec rake assets:precompile )
+ DEBUG [78513515] 	rake aborted!
+ DEBUG [78513515] 	Bundler::GemNotFound: Could not find gem 'rails (~> 7.0.3, >= 7.0.3.1)' in locally installed gems or in gems cached in vendor/cache.
+ DEBUG [78513515] 	<internal:/home/deploy/.rbenv/versions/3.1.2/lib/ruby/3.1.0/rubygems/core_ext/kernel_require.rb>:85:in `require'
+<internal:/home/deploy/.rbenv/versions/3.1.2/lib/ruby/3.1.0/rubygems/core_ext/kernel_require.rb>:85:in `require'
+/home/deploy/blog/releases/20220922090401/config/boot.rb:3:in `<top (required)>'
+/home/deploy/blog/releases/20220922090401/config/application.rb:1:in `require_relative'
+/home/deploy/blog/releases/20220922090401/config/application.rb:1:in `<top (required)>'
+/home/deploy/blog/releases/20220922090401/Rakefile:4:in `require_relative'
+/home/deploy/blog/releases/20220922090401/Rakefile:4:in `<top (required)>'
+ DEBUG [78513515] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-09-22 12:09:44 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [5f287960] Running [ -d $HOME/.rbenv/versions/3.1.2 ] as deploy@3.122.113.18
+ DEBUG [5f287960] Command: [ -d $HOME/.rbenv/versions/3.1.2 ]
+ DEBUG [5f287960] Finished in 2.982 seconds with exit status 0 (successful).
+ DEBUG [002fb33e] Running /usr/bin/env which passenger as deploy@3.122.113.18
+ DEBUG [002fb33e] Command: /usr/bin/env which passenger
+ DEBUG [002fb33e] 	/usr/bin/passenger
+ DEBUG [002fb33e] Finished in 0.164 seconds with exit status 0 (successful).
+  INFO [b5c32a6d] Running /usr/bin/env mkdir -p /tmp as deploy@3.122.113.18
+ DEBUG [b5c32a6d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /tmp )
+  INFO [b5c32a6d] Finished in 0.199 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-faf0be557c4ee8eaa23e.sh 0.0%
+  INFO Uploading /tmp/git-ssh-faf0be557c4ee8eaa23e.sh 100.0%
+  INFO [34d43a3b] Running /usr/bin/env chmod 700 /tmp/git-ssh-faf0be557c4ee8eaa23e.sh as deploy@3.122.113.18
+ DEBUG [34d43a3b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env chmod 700 /tmp/git-ssh-faf0be557c4ee8eaa23e.sh )
+  INFO [34d43a3b] Finished in 0.158 seconds with exit status 0 (successful).
+  INFO [1ebaa430] Running /usr/bin/env git ls-remote git@github.com:ilkertoklu/blog.git HEAD as deploy@3.122.113.18
+ DEBUG [1ebaa430] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-faf0be557c4ee8eaa23e.sh" ; /usr/bin/env git ls-remote git@github.com:ilkertoklu/blog.git HEAD )
+ DEBUG [1ebaa430] 	688e12b82226fb184d5f8fd35aadb304ac746d05	HEAD
+  INFO [1ebaa430] Finished in 1.865 seconds with exit status 0 (successful).
+  INFO [54973203] Running /usr/bin/env mkdir -p /home/deploy/blog/shared /home/deploy/blog/releases as deploy@3.122.113.18
+ DEBUG [54973203] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/blog/shared /home/deploy/blog/releases )
+  INFO [54973203] Finished in 0.158 seconds with exit status 0 (successful).
+  INFO [0f428ecd] Running /usr/bin/env mkdir -p /home/deploy/blog/shared/log /home/deploy/blog/shared/tmp/pids /home/deploy/blog/shared/tmp/cache /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/shared/.bundle /home/deploy/blog/shared/public/system /home/deploy/blog/shared/public/uploads /home/deploy/blog/shared/public/assets as deploy@3.122.113.18
+ DEBUG [0f428ecd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/blog/shared/log /home/deploy/blog/shared/tmp/pids /home/deploy/blog/shared/tmp/cache /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/shared/.bundle /home/deploy/blog/shared/public/system /home/deploy/blog/shared/public/uploads /home/deploy/blog/shared/public/assets )
+  INFO [0f428ecd] Finished in 0.205 seconds with exit status 0 (successful).
+ DEBUG [baf6a524] Running [ -f /home/deploy/blog/current/REVISION ] as deploy@3.122.113.18
+ DEBUG [baf6a524] Command: [ -f /home/deploy/blog/current/REVISION ]
+ DEBUG [baf6a524] Finished in 0.160 seconds with exit status 1 (failed).
+ DEBUG [bea9e357] Running [ -f /home/deploy/blog/repo/HEAD ] as deploy@3.122.113.18
+ DEBUG [bea9e357] Command: [ -f /home/deploy/blog/repo/HEAD ]
+ DEBUG [bea9e357] Finished in 0.199 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/blog/repo
+ DEBUG [538e2cfb] Running if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [538e2cfb] Command: if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi
+ DEBUG [538e2cfb] Finished in 0.158 seconds with exit status 0 (successful).
+  INFO [435cc0e0] Running /usr/bin/env git remote set-url origin git@github.com:ilkertoklu/blog.git as deploy@3.122.113.18
+ DEBUG [435cc0e0] Command: cd /home/deploy/blog/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-faf0be557c4ee8eaa23e.sh" ; /usr/bin/env git remote set-url origin git@github.com:ilkertoklu/blog.git )
+  INFO [435cc0e0] Finished in 0.218 seconds with exit status 0 (successful).
+  INFO [c9a04f02] Running /usr/bin/env git remote update --prune as deploy@3.122.113.18
+ DEBUG [c9a04f02] Command: cd /home/deploy/blog/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-faf0be557c4ee8eaa23e.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [c9a04f02] 	Fetching origin
+  INFO [c9a04f02] Finished in 1.863 seconds with exit status 0 (successful).
+ DEBUG [88658e00] Running if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [88658e00] Command: if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi
+ DEBUG [88658e00] Finished in 0.160 seconds with exit status 0 (successful).
+  INFO [37e6e748] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20220922090951 as deploy@3.122.113.18
+ DEBUG [37e6e748] Command: cd /home/deploy/blog/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-faf0be557c4ee8eaa23e.sh" ; /usr/bin/env mkdir -p /home/deploy/blog/releases/20220922090951 )
+  INFO [37e6e748] Finished in 0.204 seconds with exit status 0 (successful).
+  INFO [09e4d027] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/blog/releases/20220922090951 as deploy@3.122.113.18
+ DEBUG [09e4d027] Command: cd /home/deploy/blog/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-faf0be557c4ee8eaa23e.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/blog/releases/20220922090951 )
+  INFO [09e4d027] Finished in 4.345 seconds with exit status 0 (successful).
+ DEBUG [c16aca22] Running if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [c16aca22] Command: if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi
+ DEBUG [c16aca22] Finished in 0.205 seconds with exit status 0 (successful).
+ DEBUG [d345975e] Running /usr/bin/env git rev-list --max-count=1 master as deploy@3.122.113.18
+ DEBUG [d345975e] Command: cd /home/deploy/blog/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-faf0be557c4ee8eaa23e.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [d345975e] 	688e12b82226fb184d5f8fd35aadb304ac746d05
+ DEBUG [d345975e] Finished in 0.157 seconds with exit status 0 (successful).
+ DEBUG [4013b75b] Running if test ! -d /home/deploy/blog/releases/20220922090951; then echo "Directory does not exist '/home/deploy/blog/releases/20220922090951'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [4013b75b] Command: if test ! -d /home/deploy/blog/releases/20220922090951; then echo "Directory does not exist '/home/deploy/blog/releases/20220922090951'" 1>&2; false; fi
+ DEBUG [4013b75b] Finished in 0.205 seconds with exit status 0 (successful).
+  INFO [0f22de98] Running /usr/bin/env echo "688e12b82226fb184d5f8fd35aadb304ac746d05" > REVISION as deploy@3.122.113.18
+ DEBUG [0f22de98] Command: cd /home/deploy/blog/releases/20220922090951 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env echo "688e12b82226fb184d5f8fd35aadb304ac746d05" > REVISION )
+  INFO [0f22de98] Finished in 0.158 seconds with exit status 0 (successful).
+  INFO [b128fee2] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20220922090951 /home/deploy/blog/releases/20220922090951/tmp /home/deploy/blog/releases/20220922090951/vendor /home/deploy/blog/releases/20220922090951/public as deploy@3.122.113.18
+ DEBUG [b128fee2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/blog/releases/20220922090951 /home/deploy/blog/releases/20220922090951/tmp /home/deploy/blog/releases/20220922090951/vendor /home/deploy/blog/releases/20220922090951/public )
+  INFO [b128fee2] Finished in 0.199 seconds with exit status 0 (successful).
+ DEBUG [6403c6e6] Running [ -L /home/deploy/blog/releases/20220922090951/log ] as deploy@3.122.113.18
+ DEBUG [6403c6e6] Command: [ -L /home/deploy/blog/releases/20220922090951/log ]
+ DEBUG [6403c6e6] Finished in 0.157 seconds with exit status 1 (failed).
+ DEBUG [bdb08d35] Running [ -d /home/deploy/blog/releases/20220922090951/log ] as deploy@3.122.113.18
+ DEBUG [bdb08d35] Command: [ -d /home/deploy/blog/releases/20220922090951/log ]
+ DEBUG [bdb08d35] Finished in 0.200 seconds with exit status 0 (successful).
+  INFO [6079e750] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090951/log as deploy@3.122.113.18
+ DEBUG [6079e750] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090951/log )
+  INFO [6079e750] Finished in 0.158 seconds with exit status 0 (successful).
+  INFO [ce0bee09] Running /usr/bin/env ln -s /home/deploy/blog/shared/log /home/deploy/blog/releases/20220922090951/log as deploy@3.122.113.18
+ DEBUG [ce0bee09] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/log /home/deploy/blog/releases/20220922090951/log )
+  INFO [ce0bee09] Finished in 0.205 seconds with exit status 0 (successful).
+ DEBUG [c483e261] Running [ -L /home/deploy/blog/releases/20220922090951/tmp/pids ] as deploy@3.122.113.18
+ DEBUG [c483e261] Command: [ -L /home/deploy/blog/releases/20220922090951/tmp/pids ]
+ DEBUG [c483e261] Finished in 0.160 seconds with exit status 1 (failed).
+ DEBUG [9bc81e32] Running [ -d /home/deploy/blog/releases/20220922090951/tmp/pids ] as deploy@3.122.113.18
+ DEBUG [9bc81e32] Command: [ -d /home/deploy/blog/releases/20220922090951/tmp/pids ]
+ DEBUG [9bc81e32] Finished in 0.200 seconds with exit status 0 (successful).
+  INFO [5bb725c3] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090951/tmp/pids as deploy@3.122.113.18
+ DEBUG [5bb725c3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090951/tmp/pids )
+  INFO [5bb725c3] Finished in 0.155 seconds with exit status 0 (successful).
+  INFO [90a166d0] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/pids /home/deploy/blog/releases/20220922090951/tmp/pids as deploy@3.122.113.18
+ DEBUG [90a166d0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/tmp/pids /home/deploy/blog/releases/20220922090951/tmp/pids )
+  INFO [90a166d0] Finished in 0.198 seconds with exit status 0 (successful).
+ DEBUG [e3fa6120] Running [ -L /home/deploy/blog/releases/20220922090951/tmp/cache ] as deploy@3.122.113.18
+ DEBUG [e3fa6120] Command: [ -L /home/deploy/blog/releases/20220922090951/tmp/cache ]
+ DEBUG [e3fa6120] Finished in 0.166 seconds with exit status 1 (failed).
+ DEBUG [7e900362] Running [ -d /home/deploy/blog/releases/20220922090951/tmp/cache ] as deploy@3.122.113.18
+ DEBUG [7e900362] Command: [ -d /home/deploy/blog/releases/20220922090951/tmp/cache ]
+ DEBUG [7e900362] Finished in 0.200 seconds with exit status 0 (successful).
+  INFO [5d9cec34] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090951/tmp/cache as deploy@3.122.113.18
+ DEBUG [5d9cec34] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090951/tmp/cache )
+  INFO [5d9cec34] Finished in 0.290 seconds with exit status 0 (successful).
+  INFO [d4cd2a9d] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/cache /home/deploy/blog/releases/20220922090951/tmp/cache as deploy@3.122.113.18
+ DEBUG [d4cd2a9d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/tmp/cache /home/deploy/blog/releases/20220922090951/tmp/cache )
+  INFO [d4cd2a9d] Finished in 0.200 seconds with exit status 0 (successful).
+ DEBUG [55372556] Running [ -L /home/deploy/blog/releases/20220922090951/tmp/sockets ] as deploy@3.122.113.18
+ DEBUG [55372556] Command: [ -L /home/deploy/blog/releases/20220922090951/tmp/sockets ]
+ DEBUG [55372556] Finished in 0.164 seconds with exit status 1 (failed).
+ DEBUG [81349e58] Running [ -d /home/deploy/blog/releases/20220922090951/tmp/sockets ] as deploy@3.122.113.18
+ DEBUG [81349e58] Command: [ -d /home/deploy/blog/releases/20220922090951/tmp/sockets ]
+ DEBUG [81349e58] Finished in 0.200 seconds with exit status 1 (failed).
+  INFO [dbd4cf1b] Running /usr/bin/env ln -s /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/releases/20220922090951/tmp/sockets as deploy@3.122.113.18
+ DEBUG [dbd4cf1b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/tmp/sockets /home/deploy/blog/releases/20220922090951/tmp/sockets )
+  INFO [dbd4cf1b] Finished in 0.565 seconds with exit status 0 (successful).
+ DEBUG [d528ab3b] Running [ -L /home/deploy/blog/releases/20220922090951/vendor/bundle ] as deploy@3.122.113.18
+ DEBUG [d528ab3b] Command: [ -L /home/deploy/blog/releases/20220922090951/vendor/bundle ]
+ DEBUG [d528ab3b] Finished in 0.211 seconds with exit status 1 (failed).
+ DEBUG [70786b69] Running [ -d /home/deploy/blog/releases/20220922090951/vendor/bundle ] as deploy@3.122.113.18
+ DEBUG [70786b69] Command: [ -d /home/deploy/blog/releases/20220922090951/vendor/bundle ]
+ DEBUG [70786b69] Finished in 0.163 seconds with exit status 1 (failed).
+  INFO [fcb21adf] Running /usr/bin/env ln -s /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/releases/20220922090951/vendor/bundle as deploy@3.122.113.18
+ DEBUG [fcb21adf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/vendor/bundle /home/deploy/blog/releases/20220922090951/vendor/bundle )
+  INFO [fcb21adf] Finished in 0.205 seconds with exit status 0 (successful).
+ DEBUG [a39f7e22] Running [ -L /home/deploy/blog/releases/20220922090951/.bundle ] as deploy@3.122.113.18
+ DEBUG [a39f7e22] Command: [ -L /home/deploy/blog/releases/20220922090951/.bundle ]
+ DEBUG [a39f7e22] Finished in 0.174 seconds with exit status 1 (failed).
+ DEBUG [30121b2f] Running [ -d /home/deploy/blog/releases/20220922090951/.bundle ] as deploy@3.122.113.18
+ DEBUG [30121b2f] Command: [ -d /home/deploy/blog/releases/20220922090951/.bundle ]
+ DEBUG [30121b2f] Finished in 0.208 seconds with exit status 0 (successful).
+  INFO [020dc5b1] Running /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090951/.bundle as deploy@3.122.113.18
+ DEBUG [020dc5b1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env rm -rf /home/deploy/blog/releases/20220922090951/.bundle )
+  INFO [020dc5b1] Finished in 0.161 seconds with exit status 0 (successful).
+  INFO [e51dc32d] Running /usr/bin/env ln -s /home/deploy/blog/shared/.bundle /home/deploy/blog/releases/20220922090951/.bundle as deploy@3.122.113.18
+ DEBUG [e51dc32d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/.bundle /home/deploy/blog/releases/20220922090951/.bundle )
+  INFO [e51dc32d] Finished in 0.205 seconds with exit status 0 (successful).
+ DEBUG [4a592cc0] Running [ -L /home/deploy/blog/releases/20220922090951/public/system ] as deploy@3.122.113.18
+ DEBUG [4a592cc0] Command: [ -L /home/deploy/blog/releases/20220922090951/public/system ]
+ DEBUG [4a592cc0] Finished in 0.174 seconds with exit status 1 (failed).
+ DEBUG [ab3659f4] Running [ -d /home/deploy/blog/releases/20220922090951/public/system ] as deploy@3.122.113.18
+ DEBUG [ab3659f4] Command: [ -d /home/deploy/blog/releases/20220922090951/public/system ]
+ DEBUG [ab3659f4] Finished in 0.206 seconds with exit status 1 (failed).
+  INFO [8d7b1883] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/system /home/deploy/blog/releases/20220922090951/public/system as deploy@3.122.113.18
+ DEBUG [8d7b1883] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/public/system /home/deploy/blog/releases/20220922090951/public/system )
+  INFO [8d7b1883] Finished in 0.161 seconds with exit status 0 (successful).
+ DEBUG [49751f20] Running [ -L /home/deploy/blog/releases/20220922090951/public/uploads ] as deploy@3.122.113.18
+ DEBUG [49751f20] Command: [ -L /home/deploy/blog/releases/20220922090951/public/uploads ]
+ DEBUG [49751f20] Finished in 0.199 seconds with exit status 1 (failed).
+ DEBUG [74d0f046] Running [ -d /home/deploy/blog/releases/20220922090951/public/uploads ] as deploy@3.122.113.18
+ DEBUG [74d0f046] Command: [ -d /home/deploy/blog/releases/20220922090951/public/uploads ]
+ DEBUG [74d0f046] Finished in 0.159 seconds with exit status 1 (failed).
+  INFO [b3178c23] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/uploads /home/deploy/blog/releases/20220922090951/public/uploads as deploy@3.122.113.18
+ DEBUG [b3178c23] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/public/uploads /home/deploy/blog/releases/20220922090951/public/uploads )
+  INFO [b3178c23] Finished in 0.204 seconds with exit status 0 (successful).
+ DEBUG [ddf18ad2] Running [ -L /home/deploy/blog/releases/20220922090951/public/assets ] as deploy@3.122.113.18
+ DEBUG [ddf18ad2] Command: [ -L /home/deploy/blog/releases/20220922090951/public/assets ]
+ DEBUG [ddf18ad2] Finished in 0.160 seconds with exit status 1 (failed).
+ DEBUG [d91709bd] Running [ -d /home/deploy/blog/releases/20220922090951/public/assets ] as deploy@3.122.113.18
+ DEBUG [d91709bd] Command: [ -d /home/deploy/blog/releases/20220922090951/public/assets ]
+ DEBUG [d91709bd] Finished in 0.199 seconds with exit status 1 (failed).
+  INFO [e2fd55e9] Running /usr/bin/env ln -s /home/deploy/blog/shared/public/assets /home/deploy/blog/releases/20220922090951/public/assets as deploy@3.122.113.18
+ DEBUG [e2fd55e9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/shared/public/assets /home/deploy/blog/releases/20220922090951/public/assets )
+  INFO [e2fd55e9] Finished in 0.164 seconds with exit status 0 (successful).
+ DEBUG [19004380] Running if test ! -d /home/deploy/blog/releases/20220922090951; then echo "Directory does not exist '/home/deploy/blog/releases/20220922090951'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [19004380] Command: if test ! -d /home/deploy/blog/releases/20220922090951; then echo "Directory does not exist '/home/deploy/blog/releases/20220922090951'" 1>&2; false; fi
+ DEBUG [19004380] Finished in 0.203 seconds with exit status 0 (successful).
+  INFO [247f10bd] Running $HOME/.rbenv/bin/rbenv exec rake assets:precompile as deploy@3.122.113.18
+ DEBUG [247f10bd] Command: cd /home/deploy/blog/releases/20220922090951 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec rake assets:precompile )
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.074219 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/manifest-b84bfa46a33d7f0dc4d2e7b8889486c9a957a5e40713d58f54be71b66954a1ff.js
+I, [2022-09-22T09:10:25.074514 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/manifest-b84bfa46a33d7f0dc4d2e7b8889486c9a957a5e40713d58f54be71b66954a1ff.js.gz
+I, [2022-09-22T09:10:25.074706 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/bootstrap-logo-e87f8d8ad6bae144657b3a7c87071b1ca96bd2fd3a597dc00dfb4f117bfc33bb.svg
+I, [2022-09-22T09:10:25.074863 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/bootstrap-logo-e87f8d8ad6bae144657b3a7c87071b1ca96bd2fd3a597dc00dfb4f117bfc33bb.svg.gz
+I, [2022-09-22T09:10:25.075004 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/application-63ff45bf1e7e9e5d73ec9cfab8506bcc4c0ae74db08efebb48b05da31d6d7c90.css
+I, [2022-09-22T09:10:25.075105 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/application-63ff45bf1e7e9e5d73ec9cfab8506bcc4c0ae74db08efebb48b05da31d6d7c90.css.gz
+I, [2022-09-22T09:10:25.075234 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/application-37f365cbecf1fa2810a8303f4b6571676fa1f9c56c248528bc14ddb857531b95.js
+I, [2022-09-22T09:10:25.075358 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/application-37f365cbecf1fa2810a8303f4b6571676fa1f9c56c248528bc14ddb857531b95.js.gz
+I, [2022-09-22T09:10:25.075488 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js
+I, [2022-09-22T09:10:25.075578 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js.gz
+I, [2022-09-22T09:10:25.075697 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js
+I, [2022-09-22T09:10:25.075786 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js.gz
+I, [2022-09-22T09:10:25.075906 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js
+I, [2022-09-22T09:10:25.075995 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js.gz
+I, [2022-09-22T09:10:25.076115 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/turbo-75fdf390d33bd1a4dcbba67f94d1c3ec9257fc8b8437b17a1999a61a8ebe3718.js
+I, [2022-09-22T09:10:25.076208 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/turbo-75fdf390d33bd1a4dcbba67f94d1c3ec9257fc8b8437b17a1999a61a8ebe3718.js.gz
+I, [2022-09-22T09:10:25.076341 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/turbo.min-e5023178542f05fc063cd1dc5865457259cc01f3fba76a28454060d33de6f429.js
+I, [2022-09-22T09:10:25.076435 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/turbo.min-e5023178542f05fc063cd1dc5865457259cc01f3fba76a28454060d33de6f429.js.gz
+I, [2022-09-22T09:10:25.076562 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/turbo.min.js-a846cfe9aa92146457cc1c842185f5501c45f493ea69b21f1cdd191c039dee31.map
+I, [2022-09-22T09:10:25.076666 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/turbo.min.js-a846cfe9aa92146457cc1c842185f5501c45f493ea69b21f1cdd191c039dee31.map.gz
+I, [2022-09-22T09:10:25.076793 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/actiontext-28c61f5197c204db043317a8f8826a87ab31495b741f854d307ca36122deefce.js
+I, [2022-09-22T09:10:25.076893 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/actiontext-28c61f5197c204db043317a8f8826a87ab31495b741f854d307ca36122deefce.js.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.085922 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/trix-1563ff9c10f74e143b3ded40a8458497eaf2f87a648a5cbbfebdb7dec3447a5e.js
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.086634 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/trix-1563ff9c10f74e143b3ded40a8458497eaf2f87a648a5cbbfebdb7dec3447a5e.js.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.086897 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/trix-4d6d712b5d6490d0ded3b9d562046031c4f922acc83badc2b25d565589ba71e6.css
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.087090 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/trix-4d6d712b5d6490d0ded3b9d562046031c4f922acc83badc2b25d565589ba71e6.css.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.088646 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/es-module-shims-16719834c9bbcdd75f1f99da713bd0c89de488be94d4c5df594511f39cffe7c1.js
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.089764 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/es-module-shims-16719834c9bbcdd75f1f99da713bd0c89de488be94d4c5df594511f39cffe7c1.js.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.091847 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/es-module-shims.min-d89e73202ec09dede55fb74115af9c5f9f2bb965433de1c2446e1faa6dac2470.js
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.092699 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/es-module-shims.min-d89e73202ec09dede55fb74115af9c5f9f2bb965433de1c2446e1faa6dac2470.js.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.093989 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/es-module-shims.js-32db422c5db541b7129a2ce936aed905edc2cd481748f8d67ffe84e28313158a.map
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.094162 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/es-module-shims.js-32db422c5db541b7129a2ce936aed905edc2cd481748f8d67ffe84e28313158a.map.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.094836 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus-2e76632599c700da6e187ce7b15eea7c0eace0e09f25d19e55e3b1f7c515397c.js
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.095959 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus-2e76632599c700da6e187ce7b15eea7c0eace0e09f25d19e55e3b1f7c515397c.js.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.097968 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus-autoloader-c584942b568ba74879da31c7c3d51366737bacaf6fbae659383c0a5653685693.js
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.098609 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus-autoloader-c584942b568ba74879da31c7c3d51366737bacaf6fbae659383c0a5653685693.js.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.100550 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus-importmap-autoloader-db2076c783bf2dbee1226e2add52fef290b5d31b5bcd1edd999ac8a6dd31c44a.js
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.100725 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus-importmap-autoloader-db2076c783bf2dbee1226e2add52fef290b5d31b5bcd1edd999ac8a6dd31c44a.js.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.100921 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.105154 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.105361 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus.min-b8a9738499c7a8362910cd545375417370d72a9776fb4e766df7671484e2beb7.js
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.105512 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus.min-b8a9738499c7a8362910cd545375417370d72a9776fb4e766df7671484e2beb7.js.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.111920 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus-autoloader-c584942b568ba74879da31c7c3d51366737bacaf6fbae659383c0a5653685693.js
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.112085 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus-autoloader-c584942b568ba74879da31c7c3d51366737bacaf6fbae659383c0a5653685693.js.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.112266 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus-importmap-autoloader-db2076c783bf2dbee1226e2add52fef290b5d31b5bcd1edd999ac8a6dd31c44a.js
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.115239 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus-importmap-autoloader-db2076c783bf2dbee1226e2add52fef290b5d31b5bcd1edd999ac8a6dd31c44a.js.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.118904 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.119063 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.119297 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus.min.js-8d1a076cbda7e5ed0992e208db54c62a8de8b1f9694828e1a601fbccd9291649.map
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.119469 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/stimulus.min.js-8d1a076cbda7e5ed0992e208db54c62a8de8b1f9694828e1a601fbccd9291649.map.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.119653 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/activestorage-3ab61e47dd4ee2d79db525ade1dca2ede0ea2b7371fe587e408ee37b7ade265d.js
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.119800 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/activestorage-3ab61e47dd4ee2d79db525ade1dca2ede0ea2b7371fe587e408ee37b7ade265d.js.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.119979 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/activestorage.esm-01f58a45d77495cdfbdfcc872902a430426c4391634ec9c3da5f69fbf8418492.js
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.120124 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/activestorage.esm-01f58a45d77495cdfbdfcc872902a430426c4391634ec9c3da5f69fbf8418492.js.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.120298 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/actioncable-5433453f9b6619a9de91aaab2d7fc7ff183e5260c0107cbc9a1aa0c838d9a74e.js
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.120454 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/actioncable-5433453f9b6619a9de91aaab2d7fc7ff183e5260c0107cbc9a1aa0c838d9a74e.js.gz
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.121178 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/actioncable.esm-e01089c3ec4fe7817fa9abcad06cab6bdc387f95f0ca6aab4bf7ba7537f70690.js
+ DEBUG [247f10bd] 	I, [2022-09-22T09:10:25.122792 #13814]  INFO -- : Writing /home/deploy/blog/releases/20220922090951/public/assets/actioncable.esm-e01089c3ec4fe7817fa9abcad06cab6bdc387f95f0ca6aab4bf7ba7537f70690.js.gz
+  INFO [247f10bd] Finished in 19.761 seconds with exit status 0 (successful).
+ DEBUG [b9f82480] Running if test ! -d /home/deploy/blog/releases/20220922090951; then echo "Directory does not exist '/home/deploy/blog/releases/20220922090951'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [b9f82480] Command: if test ! -d /home/deploy/blog/releases/20220922090951; then echo "Directory does not exist '/home/deploy/blog/releases/20220922090951'" 1>&2; false; fi
+ DEBUG [b9f82480] Finished in 0.206 seconds with exit status 0 (successful).
+  INFO [cc2b8e95] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20220922090951/assets_manifest_backup as deploy@3.122.113.18
+ DEBUG [cc2b8e95] Command: cd /home/deploy/blog/releases/20220922090951 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mkdir -p /home/deploy/blog/releases/20220922090951/assets_manifest_backup )
+  INFO [cc2b8e95] Finished in 0.165 seconds with exit status 0 (successful).
+ DEBUG [0b0f40eb] Running /usr/bin/env ls /home/deploy/blog/releases/20220922090951/public/assets/.sprockets-manifest* as deploy@3.122.113.18
+ DEBUG [0b0f40eb] Command: cd /home/deploy/blog/releases/20220922090951 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ls /home/deploy/blog/releases/20220922090951/public/assets/.sprockets-manifest* )
+ DEBUG [0b0f40eb] 	/home/deploy/blog/releases/20220922090951/public/assets/.sprockets-manifest-2477c60a74c488c80bf33dc1f0b15065.json
+ DEBUG [0b0f40eb] Finished in 0.208 seconds with exit status 0 (successful).
+ DEBUG [dabdd329] Running /usr/bin/env ls /home/deploy/blog/releases/20220922090951/public/assets/.sprockets-manifest* as deploy@3.122.113.18
+ DEBUG [dabdd329] Command: cd /home/deploy/blog/releases/20220922090951 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ls /home/deploy/blog/releases/20220922090951/public/assets/.sprockets-manifest* )
+ DEBUG [dabdd329] 	/home/deploy/blog/releases/20220922090951/public/assets/.sprockets-manifest-2477c60a74c488c80bf33dc1f0b15065.json
+ DEBUG [dabdd329] Finished in 0.165 seconds with exit status 0 (successful).
+  INFO [8e04c20f] Running /usr/bin/env cp /home/deploy/blog/releases/20220922090951/public/assets/.sprockets-manifest-2477c60a74c488c80bf33dc1f0b15065.json /home/deploy/blog/releases/20220922090951/assets_manifest_backup as deploy@3.122.113.18
+ DEBUG [8e04c20f] Command: cd /home/deploy/blog/releases/20220922090951 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env cp /home/deploy/blog/releases/20220922090951/public/assets/.sprockets-manifest-2477c60a74c488c80bf33dc1f0b15065.json /home/deploy/blog/releases/20220922090951/assets_manifest_backup )
+  INFO [8e04c20f] Finished in 0.205 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [9c77ab27] Running if test ! -d /home/deploy/blog/releases/20220922090951; then echo "Directory does not exist '/home/deploy/blog/releases/20220922090951'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [9c77ab27] Command: if test ! -d /home/deploy/blog/releases/20220922090951; then echo "Directory does not exist '/home/deploy/blog/releases/20220922090951'" 1>&2; false; fi
+ DEBUG [9c77ab27] Finished in 0.505 seconds with exit status 0 (successful).
+  INFO [f9586902] Running $HOME/.rbenv/bin/rbenv exec rake db:migrate as deploy@3.122.113.18
+ DEBUG [f9586902] Command: cd /home/deploy/blog/releases/20220922090951 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec rake db:migrate )
+ DEBUG [f9586902] 	== 20220802140630 CreateArticles: migrating ===================================
+-- create_table(:articles)
+   -> 0.0007s
+== 20220802140630 CreateArticles: migrated (0.0007s) ==========================
+
+== 20220805091654 CreateComments: migrating ===================================
+-- create_table(:comments)
+   -> 0.0010s
+== 20220805091654 CreateComments: migrated (0.0010s) ==========================
+
+== 20220805142306 AddStatusToArticles: migrating ==============================
+-- add_column(:articles, :status, :string)
+   -> 0.0009s
+== 20220805142306 AddStatusToArticles: migrated (0.0009s) =====================
+
+== 20220805142321 AddStatusToComments: migrating ==============================
+-- add_column(:comments, :status, :string)
+   -> 0.0004s
+== 20220805142321 AddStatusToComments: migrated (0.0005s) =====================
+
+== 20220810085012 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+   -> 0.0008s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.0002s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.0002s
+== 20220810085012 DeviseCreateUsers: migrated (0.0013s) =======================
+
+== 20220816071221 RolifyCreateRoles: migrating ================================
+-- create_table(:roles)
+   -> 0.0007s
+-- create_table(:users_roles, {:id=>false})
+   -> 0.0006s
+-- add_index(:roles, :name)
+   -> 0.0002s
+-- add_index(:roles, [:name, :resource_type, :resource_id])
+   -> 0.0002s
+-- add_index(:users_roles, [:user_id, :role_id])
+   -> 0.0002s
+== 20220816071221 RolifyCreateRoles: migrated (0.0020s) =======================
+
+  INFO [f9586902] Finished in 3.518 seconds with exit status 0 (successful).
+  INFO [e1189275] Running /usr/bin/env ln -s /home/deploy/blog/releases/20220922090951 /home/deploy/blog/releases/current as deploy@3.122.113.18
+ DEBUG [e1189275] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ln -s /home/deploy/blog/releases/20220922090951 /home/deploy/blog/releases/current )
+  INFO [e1189275] Finished in 0.169 seconds with exit status 0 (successful).
+  INFO [933b7c48] Running /usr/bin/env mv /home/deploy/blog/releases/current /home/deploy/blog as deploy@3.122.113.18
+ DEBUG [933b7c48] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env mv /home/deploy/blog/releases/current /home/deploy/blog )
+  INFO [933b7c48] Finished in 0.200 seconds with exit status 0 (successful).
+ DEBUG [4a16a2b6] Running /usr/bin/env pwd as deploy@3.122.113.18
+ DEBUG [4a16a2b6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env pwd )
+ DEBUG [4a16a2b6] 	/home/deploy
+ DEBUG [4a16a2b6] Finished in 0.160 seconds with exit status 0 (successful).
+ DEBUG [4bd22ad7] Running if test ! -d /home/deploy; then echo "Directory does not exist '/home/deploy'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [4bd22ad7] Command: if test ! -d /home/deploy; then echo "Directory does not exist '/home/deploy'" 1>&2; false; fi
+ DEBUG [4bd22ad7] Finished in 0.205 seconds with exit status 0 (successful).
+ DEBUG [2208c656] Running /usr/bin/env passenger -v as deploy@3.122.113.18
+ DEBUG [2208c656] Command: cd /home/deploy && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env passenger -v )
+ DEBUG [2208c656] 	Phusion Passenger(R) 6.0.15
+ DEBUG [2208c656] Finished in 0.796 seconds with exit status 0 (successful).
+  INFO [bea0224d] Running /usr/bin/env passenger-config restart-app /home/deploy/blog --ignore-app-not-running as deploy@3.122.113.18
+ DEBUG [bea0224d] Command: cd /home/deploy && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env passenger-config restart-app /home/deploy/blog --ignore-app-not-running )
+ DEBUG [bea0224d] 	There are no Phusion Passenger(R)-served applications running whose paths begin with '/home/deploy/blog'.
+ DEBUG [bea0224d] 	*** Cleaning stale instance directory /tmp/passenger.FC2eRAj
+    Warning: Operation not permitted @ rb_file_chown - /tmp/passenger.FC2eRAj/.
+  INFO [bea0224d] Finished in 0.821 seconds with exit status 0 (successful).
+ DEBUG [5dee7ec8] Running /usr/bin/env ls -x /home/deploy/blog/releases as deploy@3.122.113.18
+ DEBUG [5dee7ec8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env ls -x /home/deploy/blog/releases )
+ DEBUG [5dee7ec8] 	20220922083824	20220922090254	20220922090401	20220922090951
+ DEBUG [5dee7ec8] Finished in 0.158 seconds with exit status 0 (successful).
+ DEBUG [ff6cabdb] Running if test ! -d /home/deploy/blog/releases; then echo "Directory does not exist '/home/deploy/blog/releases'" 1>&2; false; fi as deploy@3.122.113.18
+ DEBUG [ff6cabdb] Command: if test ! -d /home/deploy/blog/releases; then echo "Directory does not exist '/home/deploy/blog/releases'" 1>&2; false; fi
+ DEBUG [ff6cabdb] Finished in 0.206 seconds with exit status 0 (successful).
+  INFO [3d8e0d48] Running /usr/bin/env echo "Branch master (at 688e12b82226fb184d5f8fd35aadb304ac746d05) deployed as release 20220922090951 by ilkertoklu" >> /home/deploy/blog/revisions.log as deploy@3.122.113.18
+ DEBUG [3d8e0d48] Command: cd /home/deploy/blog/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="3.1.2" ; /usr/bin/env echo "Branch master (at 688e12b82226fb184d5f8fd35aadb304ac746d05) deployed as release 20220922090951 by ilkertoklu" >> /home/deploy/blog/revisions.log )
+  INFO [3d8e0d48] Finished in 0.165 seconds with exit status 0 (successful).
