@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index] do
     member do
       patch :ban
+      delete :delete
     end
   end
 
