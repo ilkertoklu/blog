@@ -1,21 +1,21 @@
 Rails.application.routes.draw do
+  get 'articles/index'
+  root to: 'articles#index'
+
   devise_for :users
 
   devise_scope :user do
    get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
-  get 'articles/index'
-  root to: 'articles#index'
+  resources :articles do
+    resources :comments
+  end
 
   resources :users, only: [:index] do
     member do
       patch :ban
-      delete :delete
+      delete :destroy
     end
-  end
-
-  resources :articles do
-    resources :comments
   end
 end

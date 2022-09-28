@@ -13,12 +13,12 @@ class UsersController < ApplicationController
     redirect_to users_path, notice: "User acces locked: #{@user.access_locked?}"
   end
 
-  def delete
+  def destroy
     @user = User.find(params[:id])
     @user.destroy
 
     if @user.destroy
-      redirect_to root_url, notice: "User deleted."
+      redirect_to users_path, notice: "User deleted."
     end
   end
 end

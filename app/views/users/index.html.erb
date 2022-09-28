@@ -26,9 +26,11 @@
                 <td><%= user.current_sign_in_ip %>
                 <td><%= user.last_sign_in_at.strftime('%d/%m/%Y %H:%M') %></td>
                 <td><%= user.locked_at&.strftime('%d/%m/%Y %H:%M') %></td>
-                <% if current_user.has_role? :Admin%>
-                  <td><%= button_to ban_status(user), ban_user_path(user), method: :patch, class: "btn btn-danger btn-sm"%></td>
-                  <td><%= button_to "Delete", delete_user_path(user), method: :delete, class: "btn btn-danger btn-sm" %></td>
+                <% if current_user.has_role? :Admin %>
+                  <% unless user.has_role? :Admin %>
+                    <td><%= button_to ban_status(user), ban_user_path(user), method: :patch, class: "btn btn-danger btn-sm"%></td>
+                    <td><%= button_to 'Remove', user_path(user), method: :delete, class: "btn btn-danger btn-sm" %> </td>
+                  <% end %>
                 <% end %>
               </tr>
           <% end %>
