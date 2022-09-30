@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  get '/user/profile' => 'profile#index'
+
   resources :users, only: [:index] do
     member do
       patch :ban
