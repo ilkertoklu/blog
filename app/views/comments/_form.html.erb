@@ -1,6 +1,6 @@
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
   <div class="mb-3 row">
-     <%= form.label current_user.email %>
+     <%= form.label current_user.email if user_signed_in?%>
   </div>
 
   <div class="mb-3">
