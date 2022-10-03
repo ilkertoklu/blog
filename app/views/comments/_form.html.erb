@@ -1,10 +1,10 @@
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
-  <div class="mb-3">
-    <%= form.text_field :commenter, id: "floatingInput", class: "form-control", placeholder: "commenter" %>
+  <div class="mb-3 row">
+     <%= form.label current_user.email if user_signed_in?%>
   </div>
 
   <div class="mb-3">
-    <%= form.text_area :body, id:"text", class: "form-control", placeholder: "text", rows: "3"%>
+    <%= form.text_area :body, id:"text", class: "form-control", placeholder: "Comment", rows: "3"%>
   </div>
 
   <div class="actions">
