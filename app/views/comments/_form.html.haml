@@ -1,0 +1,8 @@
+= form_with model: [ @article, @article.comments.build ] do |form|
+  - if user_signed_in?
+    .mb-3
+      = form.text_field :commenter, class: "form-control", value: current_user.email.slice(0, current_user.email.index('@')), readonly: true
+  .mb-3
+    = form.text_area :body, id:"text", class: "form-control", placeholder: "text", rows: "3"
+  .actions
+    = form.submit "Create Comment", class: "w-100 btn btn-md btn-outline-primary", type:"submit"

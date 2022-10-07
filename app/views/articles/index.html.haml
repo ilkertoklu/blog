@@ -1,0 +1,15 @@
+%body
+  %br/
+  %h1.text-center Articles
+  .form-signin.m-auto
+    - @articles.each do |article|
+      - unless article.archived?
+        %ul.list-group
+          %li.d-flex.justify-content-between.align-items-center
+            = link_to article.title, article, class: "w-100 btn btn-lg btn-light"
+    %br/
+    %br/
+    - unless user_signed_in?
+      = link_to "Log in", new_user_session_path, class: "w-100 btn btn-lg btn-primary"
+    - else
+      = link_to "New Article", new_article_path, class: "w-100 btn btn-lg btn-primary"

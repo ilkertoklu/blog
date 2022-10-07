@@ -1,0 +1,38 @@
+%body
+  - if current_user.has_role? :Admin
+    .container.text-center
+      %table.table
+        %thead
+          %tr
+            %th ID
+            %th Role
+            %th email
+            %th Sign in count
+            %th Current sign in IP
+            %th Current sign in at
+            %th Last sign in IP
+            %th Last sign in at
+            %th Banned at
+        %tbody
+          - @users.each do |user|
+            %tr
+              %td
+                = user.id
+              %td
+                = user.roles_name[0]
+              %td
+                = user.email
+              %td
+                = user.sign_in_count
+              %td
+                = user.last_sign_in_ip
+              %td
+                = user.current_sign_in_at.strftime('%d/%m/%Y %H:%M')
+              %td
+                = user.current_sign_in_ip
+              %td= user.last_sign_in_at.strftime('%d/%m/%Y %H:%M')
+              %td= user.locked_at&.strftime('%d/%m/%Y %H:%M')
+              - unless current_user.id == user.id
+                %td= button_to ban_status(user), ban_user_path(user), method: :patch, class: "btn btn-danger btn-sm"
+                %td
+                  = button_to 'Remove', user_path(user), method: :delete, class: "btn btn-danger btn-sm"

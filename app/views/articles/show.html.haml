@@ -1,0 +1,17 @@
+%body
+  %div
+  .col-lg-8.mx-auto.p-3.py-md-5
+    .btn-group{"aria-label" => "Basic outlined example", :role => "group"}
+      %h1
+        = @article.title
+         
+      - if (current_user&.has_role? :Admin) || (current_user&.has_role? :Moderator)
+        = button_to "Edit", edit_article_path(@article), method: :get, class: "btn btn-outline-primary btn-sm"
+        = button_to "Destroy", article_path(@article), method: :delete, class: "btn btn-outline-danger btn-sm"
+    %p= @article.body
+    %br/
+    %h3 Comments
+    = render @article.comments
+    .form-signin.col-lg-8.mx-auto.p-3.py-md-5
+      %h3 Add a comment:
+      = render 'comments/form'

@@ -1,0 +1,16 @@
+current directory: /home/ilkertoklu/Documents/Programming/blog/vendor/cache/ruby/3.1.0/gems/haml-6.0.5/ext/haml
+/home/ilkertoklu/.rbenv/versions/3.1.2/bin/ruby -I /home/ilkertoklu/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20221007-9456-k8hur.rb extconf.rb
+creating Makefile
+
+current directory: /home/ilkertoklu/Documents/Programming/blog/vendor/cache/ruby/3.1.0/gems/haml-6.0.5/ext/haml
+make DESTDIR\= clean
+
+current directory: /home/ilkertoklu/Documents/Programming/blog/vendor/cache/ruby/3.1.0/gems/haml-6.0.5/ext/haml
+make DESTDIR\=
+compiling haml.c
+compiling hescape.c
+linking shared-object haml/haml.so
+
+current directory: /home/ilkertoklu/Documents/Programming/blog/vendor/cache/ruby/3.1.0/gems/haml-6.0.5/ext/haml
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 haml.so ./.gem.20221007-9456-h8azi6/haml
