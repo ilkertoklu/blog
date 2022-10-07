@@ -34,5 +34,4 @@
               %td= user.locked_at&.strftime('%d/%m/%Y %H:%M')
               - unless current_user.id == user.id
                 %td= button_to ban_status(user), ban_user_path(user), method: :patch, class: "btn btn-danger btn-sm"
-                %td
-                  = button_to 'Remove', user_path(user), method: :delete, class: "btn btn-danger btn-sm"
+                %td= button_to 'Remove', user_path(user), method: :delete, class: "btn btn-danger btn-sm"

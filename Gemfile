@@ -90,6 +90,4 @@ gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 
 gem 'haml'
 
-gem "erb2haml", :group => :development
-
 gem 'jquery-rails'
