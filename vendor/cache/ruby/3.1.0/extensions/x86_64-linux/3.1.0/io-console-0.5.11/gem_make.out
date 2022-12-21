@@ -1,5 +1,5 @@
 current directory: /home/ilkertoklu/Documents/Programming/blog/vendor/cache/ruby/3.1.0/gems/io-console-0.5.11/ext/io/console
-/home/ilkertoklu/.rbenv/versions/3.1.2/bin/ruby -I /home/ilkertoklu/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20220918-25019-k8o071.rb extconf.rb
+/home/ilkertoklu/.rbenv/versions/3.1.2/bin/ruby -I /home/ilkertoklu/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20221012-34916-9j5cfx.rb extconf.rb
 checking for termios.h... yes
 checking for cfmakeraw() in termios.h... yes
 checking for sys/ioctl.h... yes
@@ -16,4 +16,4 @@ linking shared-object io/console.so
 
 current directory: /home/ilkertoklu/Documents/Programming/blog/vendor/cache/ruby/3.1.0/gems/io-console-0.5.11/ext/io/console
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 console.so ./.gem.20220918-25019-2eiha9/io
+/usr/bin/install -c -m 0755 console.so ./.gem.20221012-34916-33h3m3/io

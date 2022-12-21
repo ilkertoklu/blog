@@ -1,5 +1,5 @@
 current directory: /home/ilkertoklu/Documents/Programming/blog/vendor/cache/ruby/3.1.0/gems/racc-1.6.0/ext/racc/cparse
-/home/ilkertoklu/.rbenv/versions/3.1.2/bin/ruby -I /home/ilkertoklu/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20220918-25019-fnqq1s.rb extconf.rb
+/home/ilkertoklu/.rbenv/versions/3.1.2/bin/ruby -I /home/ilkertoklu/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20221012-34916-bwlmko.rb extconf.rb
 checking for rb_block_call()... yes
 checking for rb_ary_subseq()... yes
 creating Makefile
@@ -14,4 +14,4 @@ linking shared-object racc/cparse.so
 
 current directory: /home/ilkertoklu/Documents/Programming/blog/vendor/cache/ruby/3.1.0/gems/racc-1.6.0/ext/racc/cparse
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 cparse.so ./.gem.20220918-25019-17tvli/racc
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20221012-34916-dcdbwb/racc

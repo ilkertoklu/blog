@@ -1,0 +1,32 @@
+{
+  "name": "rails-assets-es6-promise",
+  "downloads": null,
+  "version": "4.2.4",
+  "version_downloads": null,
+  "platform": "ruby",
+  "authors": "rails-assets.org",
+  "info": "A polyfill for ES6-style Promises, tracking rsvp",
+  
+  "licenses": "MIT",
+  
+  "metadata": {
+
+  },
+  "sha": null,
+  "project_uri": "https://github.com/components/es6-promise",
+  "gem_uri": null,
+  "homepage_uri": "https://github.com/components/es6-promise",
+  "wiki_uri": null,
+  "documentation_uri": null,
+  "mailing_list_uri": null,
+  "source_code_uri": "https://github.com/components/es6-promise",
+  "bug_tracker_uri": null,
+  "dependencies": {
+    "development": [
+    
+    ],
+    "runtime": [
+
+    ]
+  }
+}

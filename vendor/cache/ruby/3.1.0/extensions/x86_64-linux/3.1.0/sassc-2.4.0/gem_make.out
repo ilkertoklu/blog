@@ -1,5 +1,5 @@
 current directory: /home/ilkertoklu/Documents/Programming/blog/vendor/cache/ruby/3.1.0/gems/sassc-2.4.0/ext
-/home/ilkertoklu/.rbenv/versions/3.1.2/bin/ruby -I /home/ilkertoklu/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20220918-25019-gejwmt.rb extconf.rb
+/home/ilkertoklu/.rbenv/versions/3.1.2/bin/ruby -I /home/ilkertoklu/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20221012-34916-oe79ox.rb extconf.rb
 creating Makefile
 
 current directory: /home/ilkertoklu/Documents/Programming/blog/vendor/cache/ruby/3.1.0/gems/sassc-2.4.0/ext
@@ -77,4 +77,4 @@ linking shared-object sassc/libsass.so
 
 current directory: /home/ilkertoklu/Documents/Programming/blog/vendor/cache/ruby/3.1.0/gems/sassc-2.4.0/ext
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 libsass.so ./.gem.20220918-25019-fginyu/sassc
+/usr/bin/install -c -m 0755 libsass.so ./.gem.20221012-34916-o5m4gd/sassc

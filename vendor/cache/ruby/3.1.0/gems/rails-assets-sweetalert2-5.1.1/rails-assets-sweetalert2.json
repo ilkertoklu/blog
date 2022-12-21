@@ -1,0 +1,39 @@
+{
+  "name": "rails-assets-sweetalert2",
+  "downloads": null,
+  "version": "5.1.1",
+  "version_downloads": null,
+  "platform": "ruby",
+  "authors": "rails-assets.org",
+  "info": "A replacement for JavaScript's popup boxes, supported fork of sweetalert",
+  
+  "licenses": "MIT",
+  
+  "metadata": {
+
+  },
+  "sha": null,
+  "project_uri": "https://limonte.github.io/sweetalert2",
+  "gem_uri": null,
+  "homepage_uri": "https://limonte.github.io/sweetalert2",
+  "wiki_uri": null,
+  "documentation_uri": null,
+  "mailing_list_uri": null,
+  "source_code_uri": "https://limonte.github.io/sweetalert2",
+  "bug_tracker_uri": null,
+  "dependencies": {
+    "development": [
+    
+    
+    {
+      "name": "rails-assets-es6-promise",
+      "requirements": ">= 0"
+    },
+    
+    
+    ],
+    "runtime": [
+
+    ]
+  }
+}
